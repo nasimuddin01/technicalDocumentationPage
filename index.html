@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+
+  <!-- Here is the Navbar. Navar's every element is connected to his respective section in main-doc page -->
+  <nav id="navbar">
+    <header>C programming</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know">
+          What you should already know
+        </a>
+      </li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+      <li><a class="nav-link" href="#while_statement">while statement</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p> C is a powerful general-purpose programming language. It is fast, portable and available in all platforms.</p>
+        <p>
+          If you are new to programming, C is a good choice to start your programming journey.
+          This is a comprehensive guide on how to get started in C programming language, why you should learn it and how you can learn it.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>A general understanding of the Computer & how to use it.</li>
+          <li>Understanding of mathematical logic & simple problem solving.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        To get started with writing C, open the CodeBlocks and write your
+        first "Hello world" C code:
+
+        <code>
+          #include&lt;stdio.h&gt;
+
+          int main()
+          {
+          printf("Hello World");
+          return 0;
+          }
+        </code>
+
+        Click on the buid & run icon in CodeBlocks. You will see "Hello World" output in console.
+      </article>
+    </section>
+
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+        <p>Some of the most common data types are:</p>
+
+        <ul>
+          <li>int</li>
+          <li>char</li>
+          <li>float</li>
+          <li>double</li>
+          <li>str</li>
+        </ul>
+
+        Although these data types are a relatively small amount, they enable you
+        to perform useful functions with your applications. functions
+        isthe other fundamental elements in the language.
+      </article>
+    </section>
+
+
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
+      <article>
+        You can declare a variable in three ways:
+        <p>
+          With the keyword of data type. For example,
+          <code>
+            int x;
+            x = 42;
+          </code>
+          This syntax can be used to declare both local and global variables.
+        </p>
+        <p>
+          By simply assigning it a value. For example,
+          <code>
+            int x = 42;
+          </code> This
+          always declares a global variable. It generates a strict JavaScript
+          warning. You shouldn't use this variant.
+        </p>
+      </article>
+    </section>
+
+
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <article>
+        <p>
+          You can create a read-only, named constant with the const keyword. The
+          syntax of a constant identifier is the same as for a variable
+          identifier: it must start with a letter, underscore or dollar sign and
+          can contain alphabetic, numeric, or underscore characters.
+        </p>
+
+        <code>
+          const in pi = 3.14;
+        </code>
+        <p>
+          A constant cannot change value through assignment or be re-declared
+          while the script is running. It has to be initialized to a value.
+        </p>
+
+        <p>
+          You cannot declare a constant with the same name as a function or
+          variable in the same scope. For example:
+        </p>
+
+        <code>
+          <!-- this code will cause error. -->
+          #include&lt;stdio.h&gt;
+          int main()
+          {
+          const int pi = 3.14;
+          int pi =3;
+
+          return 0;
+          }
+        </code>
+      </article>
+    </section>
+
+    <section class="main-section" id="if...else_statement">
+      <header>if...else statement</header>
+      <article>
+        <p> Use the if statement to execute a statement if a logical condition is
+          true. Use the optional else clause to execute a statement if the condition
+          is false. An if statement looks as follows:
+        </p>
+
+        <code>
+          if (x&lt;y) {
+          printf("X is less than Y");
+          } else {
+          printf("Y is less than X");
+          }
+        </code>
+
+        <p>
+          You may also compound the statements using else if to have multiple
+          conditions tested in sequence, as follows:
+        </p>
+
+        <code>
+          if (x&lt;0){
+          printf("X is a negative number.");
+          }
+          else if (x==0){
+          printf("X is Zero.");
+          }
+          else {
+          printf("X is a positive number.");
+          }
+        </code>
+        <p>
+          In the case of multiple conditions only the first logical condition which
+          evaluates to true will be executed. To execute multiple statements, group
+          them within a block statement ({ ... }) . In general, it's good practice
+          to always use block statements, especially when nesting if statements:
+        </p>
+
+        <code>
+          if(x&lt;10) {
+          if(y&lt;5){
+          printf("Something");
+            }
+          }
+        </code>
+      </article>
+    </section>
+
+    <section class="main-section" id="while_statement">
+      <header>while statement</header>
+      <article>
+        <p>
+          A while statement executes its statements as long as a specified condition
+          evaluates to true. A while statement looks as follows:
+        </p>
+
+        <code>
+          while (x&lt;10){
+          printf("I am a programmer.");
+          x=x+1;
+          }
+        </code>
+        <p>
+          To execute multiple statements, use a block statement ({ ... }) to group
+          those statements.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>All the documentation in this page is taken from
+          <a href="https://www.programiz.com/c-programming" target="_blank">programiz</a></p>
+      </article>
+    </section>
+  </main>
+
+</body>
+
+</html>
